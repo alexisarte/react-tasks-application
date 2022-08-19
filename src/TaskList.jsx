@@ -1,12 +1,4 @@
-import { tasks as data } from './tasks';
-import { useState, useEffect } from 'react';
-
-export default function TaskList() {
-  const [tasks, setTasks] = useState([]);
-
-  useEffect(() => {
-    setTasks(data);
-  }, []);
+function TaskList({tasks}) {
 
   if (tasks.length === 0) {
     return <h1>No hay tareas aun</h1>;
@@ -23,3 +15,5 @@ export default function TaskList() {
     </div>
   );
 }
+
+export default TaskList;
